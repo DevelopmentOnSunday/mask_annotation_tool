@@ -28,7 +28,6 @@ class QMaskCanvas(QWidget):
         self.pen_size = 20
         self._clear_size = 20
 
-       
         self.shortcut_size_up = QShortcut(QKeySequence("w"), self)
         self.shortcut_size_down = QShortcut(QKeySequence("s"), self)
         self.shortcut_pen_change = QShortcut(QKeySequence("q"), self)
@@ -45,16 +44,22 @@ class QMaskCanvas(QWidget):
             if self.change:
                 painter.setPen(
                     QPen(
-                        QColor(121, 252, 50, 100), self.pen_size, Qt.SolidLine, Qt.RoundCap
+                        QColor(121, 252, 50, 100),
+                        self.pen_size,
+                        Qt.SolidLine,
+                        Qt.RoundCap,
                     )
                 )
             else:
                 painter.setPen(
                     QPen(
-                        QColor(121, 252, 50, 100), self.pen_size, Qt.SolidLine, Qt.RoundCap
+                        QColor(121, 252, 50, 100),
+                        self.pen_size,
+                        Qt.SolidLine,
+                        Qt.RoundCap,
                     )
                 )
-                r = QRect(QPoint(), self.pen_size*QSize())
+                r = QRect(QPoint(), self.pen_size * QSize())
                 painter.setCompositionMode(QPainter.CompositionMode_Clear)
                 painter.eraseRect(r)
             painter.drawPath(self.drawingPath)
@@ -79,16 +84,22 @@ class QMaskCanvas(QWidget):
             if self.change:
                 painter.setPen(
                     QPen(
-                        QColor(121, 252, 50, 100), self.pen_size, Qt.SolidLine, Qt.RoundCap
+                        QColor(121, 252, 50, 100),
+                        self.pen_size,
+                        Qt.SolidLine,
+                        Qt.RoundCap,
                     )
                 )
             else:
                 painter.setPen(
                     QPen(
-                        QColor(121, 252, 50, 100), self.pen_size, Qt.SolidLine, Qt.RoundCap
+                        QColor(121, 252, 50, 100),
+                        self.pen_size,
+                        Qt.SolidLine,
+                        Qt.RoundCap,
                     )
                 )
-                r = QRect(QPoint(), self.pen_size*QSize())
+                r = QRect(QPoint(), self.pen_size * QSize())
                 painter.setCompositionMode(QPainter.CompositionMode_Clear)
                 painter.eraseRect(r)
             painter.drawPath(self.drawingPath)
